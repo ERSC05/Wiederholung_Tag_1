@@ -10,18 +10,21 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sag mir einen Text mit Lehrzeichen ");
-            string Text = Console.ReadLine();
-            string OhneSpace = Text.Replace(" ", string.Empty);
-            Console.WriteLine(OhneSpace);
+            Console.WriteLine("Sag mir einen Text mit ; ");
+            string txt = Console.ReadLine();
+
+            string[] splitted_txt = txt.Split(';');
+            int laenge = txt.Length;
 
 
+            for (int i = 0; i < laenge; i++)
+            {
+                Console.WriteLine(splitted_txt[i]);
 
-            
-
+            }
             Console.ReadLine();
 
-
+            //jnakdjh; ahkagfahk; agkajg ; akl
         }
     }
 }
