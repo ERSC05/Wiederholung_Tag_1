@@ -10,7 +10,7 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sag mir eine Zahl. ");
+            Console.WriteLine("Sag mir einen Zahl. ");
             decimal number1 = Convert.ToDecimal(Console.ReadLine());
 
             Console.WriteLine("Sag mir noch eine Zahl: ");
@@ -23,7 +23,7 @@ namespace Wiederholung_tag_1
 
 
 
-            Console.WriteLine();
+
             
             
 
