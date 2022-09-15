@@ -12,7 +12,7 @@ namespace Wiederholung_tag_1
         {
             Console.WriteLine("Sag mir einen Text. ");
             string Text = Console.ReadLine();
-            Console.WriteLine(Text.PadLeft(20));
+            Console.WriteLine(Text.PadRight(30));
 
 
 
