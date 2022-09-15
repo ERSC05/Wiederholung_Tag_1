@@ -10,9 +10,10 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sag mir einen Text. ");
+            Console.WriteLine("Sag mir einen Text mit Lehrzeichen ");
             string Text = Console.ReadLine();
-            Console.WriteLine(Text.PadRight(30));
+            string OhneSpace = Text.Replace(" ", string.Empty);
+            Console.WriteLine(OhneSpace);
 
 
 
