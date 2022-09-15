@@ -10,11 +10,20 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sag mir einen Text. ");
-            string Text = Console.ReadLine();
-            Console.WriteLine(Text.PadLeft(20, 'y'));
-            Console.WriteLine(Text.PadRight(30, 'y'));
+            Console.WriteLine("Sag mir einen Buchstaben. ");
+            string Buchstabe = Console.ReadLine();
+            string Text = ("Jan, Erwin, Marcello, Phillip, Lukas, Robert, Robin, Jonas, Marie, Mona, Hannes, Andreas, Christian");
+            string[] List = Text.Split(',');
 
+            foreach (string s in List)
+            {
+                if (s.Contains(Buchstabe))
+                {
+                    Console.WriteLine(s);
+                }
+                    
+            }
+            
 
 
 
