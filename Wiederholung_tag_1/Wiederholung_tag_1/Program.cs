@@ -10,18 +10,21 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sag mir einen Text mit ; ");
-            string txt = Console.ReadLine();
+            Console.WriteLine("Gib eine Zahl ein");
+            int b = Convert.ToInt32(Console.ReadLine());
+            int a = 0;
+            int c = 0;
+            int d = 0;
 
-            string[] splitted_txt = txt.Split(';');
-            int laenge = txt.Length;
 
-
-            for (int i = 0; i < laenge; i++)
+            while(a != b)
             {
-                Console.WriteLine(splitted_txt[i]);
-
+                c = c + a;
+                a = a + 1;
+                Console.WriteLine(c);
             }
+            
+
             Console.ReadLine();
 
             //jnakdjh; ahkagfahk; agkajg ; akl
