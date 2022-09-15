@@ -10,25 +10,15 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gib eine Zahl ein");
-            int Zahl = Convert.ToInt32(Console.ReadLine());
-            //int a = 0;
-            //int c = 0;
-            int d = Zahl-1;
+            Console.WriteLine("Sag mir einen Text. ");
+            string Text = Console.ReadLine();
+            Console.WriteLine(Text.PadLeft(20, 'y'));
+            Console.WriteLine(Text.PadRight(30, 'y'));
 
 
-            for(int i = 0; i < Zahl; i++)
-            {
-                Console.WriteLine(d);
-                d = d - 1;
-            }
 
-            
-            
 
             Console.ReadLine();
-
-            //jnakdjh; ahkagfahk; agkajg ; akl
         }
     }
 }
