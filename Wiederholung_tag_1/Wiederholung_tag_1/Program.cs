@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Wiederholung_tag_1
@@ -10,24 +11,43 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sag mir einen Buchstaben. ");
-            string Buchstabe = Console.ReadLine();
-            string Text = ("Jan, Erwin, Marcello, Phillip, Lukas, Robert, Robin, Jonas, Marie, Mona, Hannes, Andreas, Christian");
-            string[] List = Text.Split(',');
+            Random r = new Random();
+            int random_Zahl = r.Next(0, 10);
+            Console.WriteLine("Sag mir einen Zahl. ");
+            int Zahl = Convert.ToInt32(Console.ReadLine());
+            int b = 1;
+            int c = 2;
 
-            foreach (string s in List)
-            {
-                if (s.Contains(Buchstabe))
+                if (Zahl != random_Zahl)
                 {
-                    Console.WriteLine(s);
+                while(Zahl != random_Zahl)
+                {
+                    if (Zahl <= random_Zahl)
+                    {
+                        Console.WriteLine("Random Zahl ist größer. erhöhe deinen guess");
+
+                        
+                        Zahl = Convert.ToInt32(Console.ReadLine());
+                    }
+                    else
+                    {
+                        Console.WriteLine("Random Zahl ist kleiner. vermindere deinen Guess");
+
+                        
+                        Zahl = Convert.ToInt32(Console.ReadLine());
+                    }
                 }
                     
-            }
-            
-
-
-
+                }
+                else
+                {
+                    Console.WriteLine("Du hast die richtige Zahl Glückwunsch!!!");
+                    b = b + 1;
+                }
+            Console.WriteLine("Du hast die richtige Zahl Glückwunsch!!!");
             Console.ReadLine();
+            
+            
         }
     }
 }
