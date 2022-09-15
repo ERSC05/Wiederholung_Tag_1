@@ -10,8 +10,10 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            int Zahl1 = 3;
-            int Zahl2 = 3;
+            Console.WriteLine("Sage mir eine Zahl ");
+            int Zahl1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Sage mir eine weitere Zahl ");
+            int Zahl2 = Convert.ToInt32(Console.ReadLine());
             int Ergebnis = Zahl1 + Zahl2;
             Console.WriteLine(Zahl1+" + "+Zahl2+" = "+Ergebnis);
 
