@@ -26,13 +26,6 @@ namespace Wiederholung_tag_1
             Console.WriteLine();
             
             
-            
- /*           int Zahl1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Sage mir eine weitere Zahl ");
-            int Zahl2 = Convert.ToInt32(Console.ReadLine());
-            int Ergebnis = Zahl1 + Zahl2;
-            Console.WriteLine(Zahl1+" + "+Zahl2+" = "+Ergebnis);
- */
 
             Console.ReadLine();
 
