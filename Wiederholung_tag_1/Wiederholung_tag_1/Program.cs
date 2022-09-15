@@ -10,13 +10,13 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sag mir einen Text. U und G wird vertauscht. ");
+            Console.WriteLine("Sag mir einen Text. ");
             string Text = Console.ReadLine();
-            string TextAnders = Text.Replace('U', 'G').Replace('u', 'g');
+            
             
              
 
-            Console.WriteLine(TextAnders);
+            Console.WriteLine(Text.Length);
             
             
             
