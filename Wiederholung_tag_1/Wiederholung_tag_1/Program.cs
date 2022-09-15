@@ -11,18 +11,19 @@ namespace Wiederholung_tag_1
         static void Main(string[] args)
         {
             Console.WriteLine("Gib eine Zahl ein");
-            int b = Convert.ToInt32(Console.ReadLine());
-            int a = 0;
-            int c = 0;
-            int d = 0;
+            int Zahl = Convert.ToInt32(Console.ReadLine());
+            //int a = 0;
+            //int c = 0;
+            int d = Zahl-1;
 
 
-            while(a != b)
+            for(int i = 0; i < Zahl; i++)
             {
-                c = c + a;
-                a = a + 1;
-                Console.WriteLine(c);
+                Console.WriteLine(d);
+                d = d - 1;
             }
+
+            
             
 
             Console.ReadLine();
