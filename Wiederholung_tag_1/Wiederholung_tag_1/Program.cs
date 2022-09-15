@@ -10,21 +10,12 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sag mir einen Zahl. ");
-            decimal number1 = Convert.ToDecimal(Console.ReadLine());
-
-            Console.WriteLine("Sag mir noch eine Zahl: ");
-            decimal number2 = Convert.ToDecimal(Console.ReadLine());
-
-            decimal Ergebnis = number1 + number2;
-
-            Console.WriteLine(number1 +" + "+number2 + " + "+Ergebnis);
+            Console.WriteLine("Sag mir einen Text. ");
+            string Text = Console.ReadLine();
+            Console.WriteLine(Text.PadLeft(20));
 
 
 
-
-
-            
             
 
             Console.ReadLine();
