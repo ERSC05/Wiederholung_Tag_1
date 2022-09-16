@@ -12,10 +12,12 @@ namespace Wiederholung_tag_1
         static void Main(string[] args)
         {
             // [  |    |    |   |   ]
-            int[] zahlen = new int[5];
 
-            // [26 | 8 | 12 | 3 | 6 ]
-            int[] zahlen2 = new int[] {26, 8, 12 ,3 ,6 };
+            Console.WriteLine("Nenne die Größe vom int-Array");
+            int Groese = Convert.ToInt32(Console.ReadLine());
+            int[] zahlen = new int[Groese];
+
+           
 
             
             for(int i = 0; i < zahlen.Length; i++)
