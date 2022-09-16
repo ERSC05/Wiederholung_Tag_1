@@ -15,12 +15,11 @@ namespace Wiederholung_tag_1
             int zahl1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Gebe eine weitere Zahl ein");
             int zahl2 = Convert.ToInt32(Console.ReadLine());
-            
 
             int ergebnis = Add(zahl1, zahl2);
             Console.WriteLine(ergebnis);
 
-            ergebnis = divi(zahl1, zahl2);
+            ergebnis = divide(zahl1, zahl2);
             Console.WriteLine(ergebnis);
 
             ergebnis = subtra(zahl1, zahl2);
@@ -37,11 +36,12 @@ namespace Wiederholung_tag_1
             int summe = z1 + z2;
             return summe;
         }
-        static int divi(int z1, int z2)
+        static int divide(int z1, int z2)
         {
             int div = z1 / z2;
             return div;
         }
+
         static int subtra(int z1, int z2)
         {
             int sub = z1 - z2;
