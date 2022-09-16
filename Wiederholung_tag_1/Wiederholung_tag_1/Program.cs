@@ -12,20 +12,24 @@ namespace Wiederholung_tag_1
         static void Main(string[] args)
         {
             // [  |    |    |   |   ]
-            string[] namen = new string[13];
-            string[] namen2 = new string[] { "Lukas", "Jonas", "Mona", "Marie", "Phillip", "Erwin", "Leon", "Marcello", "Johannes", "Robin", "Andreas", "Robert" };
+            int[] zahlen = new int[5];
 
-            for (int i = 0; i < namen2.Length; i++)
+            // [26 | 8 | 12 | 3 | 6 ]
+            int[] zahlen2 = new int[] {26, 8, 12 ,3 ,6 };
+
+            
+            for(int i = 0; i < zahlen.Length; i++)
             {
-                namen2[i] += "      123";
+                Console.WriteLine("gebe mir eine Zahl für Array!");
+                zahlen[i] = Convert.ToInt32(Console.ReadLine());
             }
+            Console.Write("[");
 
-            foreach (string trainiee in namen2)
+            for(int i = 0; i < zahlen.Length; i++)
             {
-
-                Console.WriteLine(trainiee);
-
+                Console.Write($"{zahlen[i]} | ");
             }
+            Console.Write("]");
             Console.ReadLine();
             
             
