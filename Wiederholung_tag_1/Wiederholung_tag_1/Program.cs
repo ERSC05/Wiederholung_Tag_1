@@ -20,24 +20,19 @@ namespace Wiederholung_tag_1
 
                 if (Zahl != random_Zahl)
                 {
-                while(Zahl != random_Zahl)
-                {
-                    if (Zahl <= random_Zahl)
+                    while(Zahl != random_Zahl)
                     {
-                        Console.WriteLine("Random Zahl ist größer. erhöhe deinen guess");
-
-                        
-                        Zahl = Convert.ToInt32(Console.ReadLine());
+                        if (Zahl <= random_Zahl)
+                        {
+                            Console.WriteLine("Random Zahl ist größer. erhöhe deinen guess")
+                            Zahl = Convert.ToInt32(Console.ReadLine());
+                        }
+                        else
+                        {
+                            Console.WriteLine("Random Zahl ist kleiner. vermindere deinen Guess");
+                            Zahl = Convert.ToInt32(Console.ReadLine());
+                        }
                     }
-                    else
-                    {
-                        Console.WriteLine("Random Zahl ist kleiner. vermindere deinen Guess");
-
-                        
-                        Zahl = Convert.ToInt32(Console.ReadLine());
-                    }
-                }
-                    
                 }
                 else
                 {
