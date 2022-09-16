@@ -25,6 +25,7 @@ namespace Wiederholung_tag_1
                 Console.WriteLine("gebe mir eine Zahl für Array!");
                 zahlen[i] = Convert.ToInt32(Console.ReadLine());
             }
+            Console.WriteLine("Deine Zahlen sind");
             Console.Write("[");
 
             for(int i = 0; i < zahlen.Length; i++)
@@ -33,8 +34,15 @@ namespace Wiederholung_tag_1
             }
             Console.Write("]");
             Console.ReadLine();
-            
-            
+
+            Console.Write("Minimum und maximum sind hier:");
+            Console.Write(" "zahlen.Min()+" , ");
+            Console.Write(zahlen.Max());
+            Console.ReadLine();
+
+
+
+
         }
     }
 }
