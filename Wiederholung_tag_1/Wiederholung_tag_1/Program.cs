@@ -11,35 +11,21 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
-            int random_Zahl = r.Next(0, 10);
-            Console.WriteLine("Sag mir einen Zahl. ");
-            int Zahl = Convert.ToInt32(Console.ReadLine());
-            int b = 1;
-            int c = 2;
+            // [  |    |    |   |   ]
+            string[] namen = new string[13];
+            string[] namen2 = new string[] { "Lukas", "Jonas", "Mona", "Marie", "Phillip", "Erwin", "Leon", "Marcello", "Johannes", "Robin", "Andreas", "Robert" };
 
-                if (Zahl != random_Zahl)
-                {
-                    while(Zahl != random_Zahl)
-                    {
-                        if (Zahl <= random_Zahl)
-                        {
-                            Console.WriteLine("Random Zahl ist größer. erhöhe deinen guess")
-                            Zahl = Convert.ToInt32(Console.ReadLine());
-                        }
-                        else
-                        {
-                            Console.WriteLine("Random Zahl ist kleiner. vermindere deinen Guess");
-                            Zahl = Convert.ToInt32(Console.ReadLine());
-                        }
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Du hast die richtige Zahl Glückwunsch!!!");
-                    b = b + 1;
-                }
-            Console.WriteLine("Du hast die richtige Zahl Glückwunsch!!!");
+            for (int i = 0; i < namen2.Length; i++)
+            {
+                namen2[i] += "      123";
+            }
+
+            foreach (string trainiee in namen2)
+            {
+
+                Console.WriteLine(trainiee);
+
+            }
             Console.ReadLine();
             
             
