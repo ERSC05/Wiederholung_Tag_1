@@ -13,31 +13,43 @@ namespace Wiederholung_tag_1
         {
             // [  |    |    |   |   ]
 
-            Console.WriteLine("Nenne die Größe vom int-Array");
-            int Groese = Convert.ToInt32(Console.ReadLine());
-            int[] zahlen = new int[Groese];
+            Random random = new Random();
+            int a = 1;
+            bool Status = true;
+            do
+            {
+                if ((a % 3 == 0) && (a % 5 == 0))
+                {
+                    Console.WriteLine("FizzBuzz");
+                    a = a + 1;
+                }
+                else if (a % 3 == 0)
+                {
+                    Console.WriteLine("Fizz");
+                    a = a + 1;
+                }
+                else if (a % 5 == 0)
+                {
+                    Console.WriteLine("Buzz");
+                    a = a + 1;
+                }
 
-           
+                else
+                {
+                    if (a <= 100)
+                    {
+                        Console.WriteLine(a);
+                        a = a + 1;
+                    }
+                    else
+                    {
+                        Status = false;
+                    }
+                }
+            } while (Status);
 
             
-            for(int i = 0; i < zahlen.Length; i++)
-            {
-                Console.WriteLine("gebe mir eine Zahl für Array!");
-                zahlen[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Console.WriteLine("Deine Zahlen sind");
-            Console.Write("[");
-
-            for(int i = 0; i < zahlen.Length; i++)
-            {
-                Console.Write($"{zahlen[i]} | ");
-            }
-            Console.Write("]");
-            Console.ReadLine();
-
-            Console.Write("Minimum und maximum sind hier:");
-            Console.Write(" "zahlen.Min()+" , ");
-            Console.Write(zahlen.Max());
+            
             Console.ReadLine();
 
 
