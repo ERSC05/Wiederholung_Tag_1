@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -11,28 +12,29 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            List<int> list1 = new List<int>() {5, 3, 7};
-            string space = Console.ReadLine();
-            string n = Console.ReadLine();
-            
-            do
+            int Pair = 0;
+            int Ja = 0;
+
+            Console.WriteLine("Drücke 1 um das spiel zu starten");
+            Ja = Convert.ToInt32(Console.ReadLine());
+            Random r = new Random(36);
+            int gerade = r % 2;
+
+            while (Ja == 1)
             {
-                Console.WriteLine("füge zahlen hinzu ");
-                list1.Add(Convert.ToInt32(Console.ReadLine()));
-                Console.WriteLine("willst du noch eine andere Zahl hinzufügen? ");
-                if (n == "n")
+                if (Pair == 1)
                 {
-                    Console.WriteLine("Füge weitere Zahlen hinzu");
-            
-                
+                    if (r == gerade)
+                    {
+                        Console.WriteLine("DU gewinnst $20 bei deinem nächsten match")
+                    }
+                    else if (r == 0)
+                    {
+                        Console.WriteLine("Dein einsatz bleibt gleich")
+                    }
                 }
-            } while (Console.ReadLine() != "n");
 
-            foreach (int i in list1)
-            {
-                Console.WriteLine(i);
             }
-
 
             Console.ReadLine();
         }        
