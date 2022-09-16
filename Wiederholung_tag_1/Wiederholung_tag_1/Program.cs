@@ -11,15 +11,49 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wir holen uns eine Zahl aus Numer()");
-            List<string> names = Number();
-            foreach (var name in names)
-            {
-                Console.WriteLine(name);
-            }
+            Console.WriteLine("gebe ein zahl ein");
+            int zahl1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Gebe eine weitere Zahl ein");
+            int zahl2 = Convert.ToInt32(Console.ReadLine());
             
+
+            int ergebnis = Add(zahl1, zahl2);
+            Console.WriteLine(ergebnis);
+
+            ergebnis = divi(zahl1, zahl2);
+            Console.WriteLine(ergebnis);
+
+            ergebnis = subtra(zahl1, zahl2);
+            Console.WriteLine(ergebnis);
+
+            ergebnis = multi(zahl1, zahl2);
+            Console.WriteLine(ergebnis);
+
             Console.ReadLine();
         }
+
+        static int Add(int z1, int z2)
+        {
+            int summe = z1 + z2;
+            return summe;
+        }
+        static int divi(int z1, int z2)
+        {
+            int div = z1 / z2;
+            return div;
+        }
+        static int subtra(int z1, int z2)
+        {
+            int sub = z1 - z2;
+            return sub;
+        }
+        static int multi(int z1, int z2)
+        {
+            int mult = z1 * z2;
+            return mult;
+        }
+        
+
 
         //static Rückgabetyp Methodenname (Parameter)
         static List<string> Number()
