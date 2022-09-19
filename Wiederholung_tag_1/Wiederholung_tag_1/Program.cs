@@ -15,67 +15,95 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Wie viele Autos willst du in die Liste anlegen?");
+            double Laenge = 0;
+            double Breite = 0;
+            double Hoehe = 0;
+            string Roof = " ";
+            string Farbe = " ";
+            double Etage = 0;
+            double Preis = 0;
 
+            double BerechnungQM = GrundstückQM(Laenge, Breite);
+
+            double BerechnungWF = hauswohnflaeche(Laenge, Breite, Hoehe);
+
+            List<Haus>Wohnung = new List<Haus>();
+
+
+            Console.WriteLine("Gib die Länge des Hauses an");
+            Laenge = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Gib die Breite des Hauses an");
+            Breite = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Gib die höhe des Hauses an");
             
-            int AutoZahl = Convert.ToInt32(Console.ReadLine());
-            int TypeId = 0;
-            string Make = "0";
-            string Model = "0";
-            string Color = "0";
-            string typeName = "0";
-            int CCM = 0;
-            int Reifen = 0;
-            int f = 0;
+            Hoehe = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Gib die Dachart des Hauses an");
+            Roof = Console.ReadLine();
+            Console.WriteLine("roof farbe");
+            Farbe = Console.ReadLine();
+            Console.WriteLine("anzahl der Etagen");
+            Etage = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Preis");
+            Preis = Convert.ToInt32(Console.ReadLine());
 
 
-
-            List<Car> cars = new List<Car>() {};
-            while (AutoZahl != f)
+            BerechnungQM = GrundstückQM(Laenge, Breite);
+            hauswohnflaeche(Laenge, Breite, Hoehe);
+            Haus h1 = new Haus(Laenge, Breite, Hoehe, Roof, Farbe, Etage, Preis, BerechnungQM, BerechnungWF);
+            Wohnung.Add(h1);
+            // Farbe ändern
+            Console.WriteLine("Willst du die Farbe des Hauses ändern?");
+            
+            string u = Console.ReadLine();
+            if (u == "y")
             {
-                Console.WriteLine("gib eine TypeId an");
-                TypeId = Convert.ToInt16(Console.ReadLine());
-                Console.WriteLine("Make eingeben");
-                Make = Console.ReadLine();
-                Console.WriteLine("Model eingeben");
-                Model = Console.ReadLine();
-                Console.WriteLine("typeName eingeben");
-                typeName = Console.ReadLine();
-                Console.WriteLine("Color eingeben");
-                Color = Console.ReadLine();
-                Console.WriteLine("ccm eingeben");
-                CCM = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Reifen anzahl");
-                Reifen = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("Welche farbe willst du haben?");
+                Farbe = Console.ReadLine();
+                Haus h2 = new Haus(Laenge, Breite, Hoehe, Roof, Farbe, Etage, Preis, BerechnungQM, BerechnungWF);
+                Console.WriteLine("Welche farbe willst du haben?");            
 
-
-                f = f + 1;
-                Car c = new Car(TypeId, Make, Model, typeName, Color, CCM, Reifen);
-                cars.Add(c);
-
-
+                Wohnung.Add(h2);
             }
-            foreach(Car car in cars)
+            else
             {
-                car.PrintCarInformation();
+                Console.WriteLine("Foherige Wohnung");
+                foreach (Haus a in Wohnung)
+                {
+                    a.PrintHausInformation();
+                }
             }
-            
 
             
+           
+            
+            
+                        
 
-/*            List<string> Tags = new List<string>(4);
 
-            List<Car> cars = new List<Car>();
 
-            foreach(Car car in cars)
-            {
-                
-                car.PrintCarInformation();
-            }  
-*/            Console.ReadLine();
-        }        
-        
+
+
+
+
+
+            Console.ReadLine();
+        }  
+        static double GrundstückQM(double f, double b)
+        {
+            double QM = f* b;
+            return QM;
+        }
+        static double hauswohnflaeche(double f, double b, double h)
+        {
+            double flaeche = f * b * h;
+            return flaeche;
+        }
+
+
     }
+
+    
+
 
     
 }
