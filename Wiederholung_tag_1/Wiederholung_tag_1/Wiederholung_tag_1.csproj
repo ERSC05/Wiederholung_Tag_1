@@ -44,8 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Car.cs" />
+    <Compile Include="Circle.cs" />
+    <Compile Include="Class3Eck.cs" />
+    <Compile Include="Geometry.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recheck.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
