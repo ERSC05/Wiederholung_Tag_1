@@ -29,7 +29,7 @@ namespace Wiederholung_tag_1
 
             List<Haus>Wohnung = new List<Haus>();
 
-
+            //Abfrage an den User
             Console.WriteLine("Gib die Länge des Hauses an");
             Laenge = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Gib die Breite des Hauses an");
@@ -60,12 +60,18 @@ namespace Wiederholung_tag_1
                 Console.WriteLine("Welche farbe willst du haben?");
                 Farbe = Console.ReadLine();
                 Haus h2 = new Haus(Laenge, Breite, Hoehe, Roof, Farbe, Etage, Preis, BerechnungQM, BerechnungWF);
-                Console.WriteLine("Welche farbe willst du haben?");            
-
                 Wohnung.Add(h2);
+                Console.Clear();
+
+                foreach (Haus a in Wohnung)
+                {
+                    a.PrintHausInformation();
+                }
+
             }
             else
             {
+                Console.Clear();
                 Console.WriteLine("Foherige Wohnung");
                 foreach (Haus a in Wohnung)
                 {
