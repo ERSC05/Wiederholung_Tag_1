@@ -7,27 +7,20 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Wiederholung_tag_1
 {
-    public class Car
+    public class Car :Vehicle
     {
         //Car
-        public int TypeId { get; set; }
-        public string Make { get; set; }
-        public string Model { get; set; }
-        public string TypeName { get; set; }  
-        public string Color { get; set; }
-        public int CCM { get; set; }
-        public int Reifen { get; set; }
 
 
-        public Car(int typeId, string make, string model, string typeName, string color, int ccm, int reifen)
+        public Car(int typeId, string make, string model, string typeName, int ccm, string color)
         {
             TypeId = typeId;
             Make = make;
             Model = model;
             TypeName = typeName;
-            Color = color;
             CCM = ccm;
-            Reifen = reifen;
+            Color = color;
+            
         }
 
 

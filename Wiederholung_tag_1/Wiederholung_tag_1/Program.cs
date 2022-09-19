@@ -23,7 +23,6 @@ namespace Wiederholung_tag_1
 
             List<IGeometry> geometries = new List<IGeometry>();
 
-
             geometries.Add(d);
             geometries.Add(c);
             geometries.Add(r);
@@ -34,6 +33,20 @@ namespace Wiederholung_tag_1
             }
 
 
+            List<Vehicle> fahrzeuge = new List<Vehicle>();
+            fahrzeuge.Add(new Motorcycle1(123, "bmw", "sheeesh", "geilomart", 4 , "blau"));
+            fahrzeuge.Add(new Car(123, "vw", "sheeesh", "geilomart", 10, "yellow"));
+
+            foreach(Vehicle v in fahrzeuge)
+            {
+                v.Starten();
+                v.Beschleunigen();
+                v.Beschleunigen();
+                v.Bremsen();
+                v.Starten();
+                v.Bremsen();
+                v.Bremsen();
+            }
 
             Console.ReadLine();
         }  
