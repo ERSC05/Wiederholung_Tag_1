@@ -36,7 +36,6 @@ namespace MMO
             int GP = Convert.ToInt32(Console.ReadLine());
 
             
-
         }
     }
 }

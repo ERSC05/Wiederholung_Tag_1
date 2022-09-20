@@ -21,6 +21,7 @@ namespace MMO
 
             Console.WriteLine("Mit wie viel GP willst du spielen?");
             int GP = Convert.ToInt32(Console.ReadLine());
+            
 
             if (GP > 0)
             {
