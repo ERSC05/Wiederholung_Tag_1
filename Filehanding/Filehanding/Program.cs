@@ -49,25 +49,41 @@ namespace FileStream_CreateFile
             {
                 eintraege.Add(sr.ReadLine().Split(';'));
             }
-
-            StreamWriter sw = new StreamWriter(@"C:/010Projects/Tag_1_Wiederholung/Wiederholung tag 1nr2/JungeHüpfer.csv");
-
-
-            for (int i = 0; i < eintraege.Count; i++)
+            int x = 0;
+            using (StreamWriter sw = new StreamWriter(@"C:/010Projects/Tag_1_Wiederholung/Wiederholung tag 1nr2/JungeHüpfer.csv"))
             {
 
-                if (Convert.ToInt32(eintraege[i][2]) < 20 && eintraege[i][0] == "m")
+
+
+
+
+                for (int i = 0; i < eintraege.Count; i++)
                 {
-                    Console.WriteLine(string.Join("\t", eintraege[i]));
-                    sw.WriteLine(string.Join(";", eintraege[i]));
+                    int j = 18;
+                    if (Convert.ToInt32(eintraege[i][2]) != j)
+                    {
+                        j++;
+                        using (StreamWriter Writer = new StreamWriter(@"C:/010Projects/Tag_1_Wiederholung/Wiederholung tag 1nr2/JungeHüpfer" + x + ".csv"))
+                        {
+                            x++;
+                        }
+
+
+                        if (Convert.ToInt32(eintraege[i][2]) < 18)
+                        {
+                            Console.WriteLine(string.Join("\t", eintraege[i]));
+                            sw.WriteLine(string.Join(";", eintraege[i]));
+
+                        }
+                    }
                 }
+
+                //sw.Close();
+                //sw.Dispose();
+
+                Console.ReadKey();
+
             }
-            sw.Close();
-            sw.Dispose();
-
-            Console.ReadKey();
-
-            
-        }
+        }   
     }
 }
