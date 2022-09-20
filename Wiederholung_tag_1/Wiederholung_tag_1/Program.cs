@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Management.Instrumentation;
 using System.Net.Mime;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Policy;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Wiederholung_tag_1
 {
@@ -15,6 +18,11 @@ namespace Wiederholung_tag_1
     {
         static void Main(string[] args)
         {
+
+
+            Console.ReadLine();
+
+
             Class3Eck d = new Class3Eck(2, 4, 10);
 
             Circle c = new Circle(5);
