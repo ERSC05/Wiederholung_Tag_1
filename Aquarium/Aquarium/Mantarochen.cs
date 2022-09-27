@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace aquarium
 {
-    public class Shark : FishClass
+    public class Mantarochen : FishClass
     {
-        public  Shark(int x, int y)
+        public Mantarochen(int x, int y)
         {
-            Laenge = @"<////====><";
-            LaengeReverse = @"><====\\\\>";
+            Laenge = "<>-----";
+            LaengeReverse = "-----<>";
             PosX = x;
             PosY = y;
             Richtung = "l";
-            Hoeheaendert = 4;
+            Hoeheaendert = 2;
             Richtungaendert = 50;
-            Speed = 5;
+            Speed = 1;
         }
-        
     }
 }

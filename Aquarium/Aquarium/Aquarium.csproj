@@ -50,6 +50,7 @@
     <Compile Include="Fressen.cs" />
     <Compile Include="Kugelfisch.cs" />
     <Compile Include="Aquarium.cs" />
+    <Compile Include="Mantarochen.cs" />
     <Compile Include="Programm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Swordfish.cs" />

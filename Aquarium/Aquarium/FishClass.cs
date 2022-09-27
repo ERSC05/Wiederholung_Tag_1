@@ -17,6 +17,7 @@ namespace aquarium
         public int Hoeheaendert { get; set; }
         public int Richtungaendert { get; set; }
         public int Speed { get; set; }
+        public string typename { get; set; }
 
         
         public void Schwimmen(Aquarium aquarium)
@@ -82,18 +83,7 @@ namespace aquarium
                 }
             }
         }
-        public void Fressen(FishClass Crap)
-        {
-            if (typeof(Shark).ToString() == "Shark")
-            {
-                string a = Convert.ToString(GetType());
-                if (Crap.Laenge == "<><")
-                {
-                    List<string> list = new List<string>();
-                    list.Add("<><");
-                    
-                }
-            }
-        }
+
+        
     }
 }

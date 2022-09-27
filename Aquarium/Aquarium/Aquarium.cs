@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace aquarium
@@ -14,6 +15,7 @@ namespace aquarium
         public Random Random { get; set; }
         public string[,] Content { get; set; }
         public List<FishClass> Fishes { get; set; }
+        public List<Shark> Sharks { get; set; }
         public Aquarium(int breite, int height)
         {
             Breite = breite;
@@ -24,12 +26,13 @@ namespace aquarium
         }
 
         public void AquariumLeer()
-        {   
+        {
             for (int j = 0; j < Content.GetLength(0); j++)
             {
                 for (int i = 0; i < Content.GetLength(1); i++)
                 {
-                    Content[j, i] = ".";
+                    Content[j, i] = "~";
+
 
                     if (j == Content.GetLength(0) - 1 && (i == Content.GetLength(1) - 1 || i == 0))
                     {
@@ -46,6 +49,7 @@ namespace aquarium
                 }
             }
             //Fische erzeugen und ins aquarium
+
             foreach (FishClass fish in Fishes)
             {
                 int y = fish.PosY;
@@ -57,14 +61,15 @@ namespace aquarium
                     Laenge = fish.LaengeReverse;
                 }
 
-
                 foreach (char c in Laenge)
                 {
                     Content[fish.PosX, y] = Char.ToString(c);
                     y++;
                 }
             }
+
             PrintAquarium();
+
         }
         //Aquarium print
         private void PrintAquarium()
@@ -74,7 +79,14 @@ namespace aquarium
             {
                 for (int j = 0; j < Content.GetLength(1); j++)
                 {
+                    if (Content[i, j] == "~")
+                    {
+                        Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    }
+
+
                     Console.Write(Content[i, j]);
+                    Console.ForegroundColor = ConsoleColor.White;
                 }
                 Console.Write("\n");
             }
@@ -87,6 +99,7 @@ namespace aquarium
             Fishes.Add(new Shark(6, 19));
             Fishes.Add(new Kugelfisch(8, 15));
             Fishes.Add(new Schwertfisch(3, 15));
+            Fishes.Add(new Mantarochen(1, 14));
         }
         public void AddFish2()
         //inizialisierung der zweiten Fische
@@ -95,6 +108,7 @@ namespace aquarium
             Fishes.Add(new Shark(35, 20));
             Fishes.Add(new Kugelfisch(35, 15));
             Fishes.Add(new Schwertfisch(30, 15));
+
         }
 
         public void Schwimmen()
@@ -104,27 +118,24 @@ namespace aquarium
                 fish.Schwimmen(this);
             }
         }
-        public void Fressen()
+        public void Fressen(FishClass fishClass)
         {
-            List<string> gefresseneFische = new List<string>();
-            string gettype = Convert.ToString(GetType());
+
             foreach (FishClass fish in Fishes)
             {
-                if (GetType() = "Crap")
+                if (fish.GetType().Name == "Shark")
                 {
-                    gefresseneFische.Add("<><");
-                }
-                else if (gettype == "Swordfish") 
-                {
-                    gefresseneFische.Add("-<><");
-                }
-                else if (gettype == "Kugelfisch")
-                {
-                    gefresseneFische.Add("<()><");
-                    fish.Fressen(fish);
+                    int a = fish.GetType().GenericParameterPosition;
+                    Console.WriteLine(a);
+
+                    if (fish.GetType().Name == "Crap")
+                    {
+                        int b = fish.GetType().GenericParameterPosition;
+                        Console.WriteLine(b);
+                    }
                 }
             }
+
         }
-        
     }
 }
