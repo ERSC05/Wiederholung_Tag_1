@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace aquarium
 {
-    public class Kugelfisch : FishClass
+    public class Schwertfisch : FishClass
     {
-        public Kugelfisch(int x, int y)
+        public Schwertfisch(int x, int y)
         {
-            Laenge = "<()><";
-            LaengeReverse = "><()>";
+            Laenge = "-<><";
+            LaengeReverse = "><>-";
             PosX = x;
             PosY = y;
             Richtung = "l";
-            Hoeheaendert = 10;
+            Hoeheaendert = 5;
             Richtungaendert = 50;
-            Speed = 1;
+            Speed = 2;
         }
     }
 }

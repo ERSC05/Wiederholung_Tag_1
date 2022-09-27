@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace aquarium
 {
-    public class Kugelfisch : FishClass
+    public class Carp : FishClass
     {
-        public Kugelfisch(int x, int y)
+        public Carp(int x, int y)
         {
-            Laenge = "<()><";
-            LaengeReverse = "><()>";
+            Laenge = "<><";
+            LaengeReverse = "><>";
             PosX = x;
             PosY = y;
             Richtung = "l";
-            Hoeheaendert = 10;
+            Hoeheaendert = 2;
             Richtungaendert = 50;
             Speed = 1;
         }

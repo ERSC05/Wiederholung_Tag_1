@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{055921F6-8D03-449C-84B5-DD8E60A5BEA2}</ProjectGuid>
+    <ProjectGuid>{E7363583-DAAD-46AC-B3E1-6A1CD43C1EBE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Aquarium</RootNamespace>
-    <AssemblyName>Aquarium</AssemblyName>
+    <RootNamespace>ConsoleApp2</RootNamespace>
+    <AssemblyName>ConsoleApp2</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,17 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AquariumArray.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="Carp.cs" />
-    <Compile Include="FishClass.cs" />
-    <Compile Include="Fressen.cs" />
-    <Compile Include="Kugelfisch.cs" />
     <Compile Include="Aquarium.cs" />
-    <Compile Include="Programm.cs" />
+    <Compile Include="Crap.cs" />
+    <Compile Include="Fish.cs" />
+    <Compile Include="Kugelfisch.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Swordfish.cs" />
-    <Compile Include="Shark.cs" />
+    <Compile Include="Schwertfisch.cs" />
+    <Compile Include="shark.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

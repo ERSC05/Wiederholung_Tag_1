@@ -4,21 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace aquarium
+namespace ConsoleApp2
 {
-    public class Shark : FishClass
+    public class shark : Fish
     {
-        public Shark(int x, int y)
+        public shark(int x, int y)
         {
             Laenge = @"<////====><";
-            LaengeReverse = @"><====\\\\>";
+            LaengeReversed = @"><====\\\\>";
             PosX = x;
             PosY = y;
-            Richtung = "l";
+            Richtung = "left";
             Hoeheaendert = 4;
             Richtungaendert = 50;
             Speed = 5;
         }
-        
     }
 }

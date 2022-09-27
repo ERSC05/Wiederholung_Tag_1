@@ -1,62 +1,99 @@
-﻿using System;
+﻿using Aquarium;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Aquarium
+namespace aquarium
 {
-    public class FishClass
+    public abstract class FishClass
     {
-        
-        public int Groeße { get; set; }
-        public string Name { get; set; }
+        public int PosX { get; set; }
+        public int PosY { get; set; }
+        public string Richtung { get; set; }
+        public string Laenge { get; set; }
+        public string LaengeReverse { get; set; }
+        public int Hoeheaendert { get; set; }
+        public int Richtungaendert { get; set; }
         public int Speed { get; set; }
-        public FishClass(int groeße, string name, int speed)
+
+        
+        public void Schwimmen(Aquarium aquarium)
         {
-            Groeße = groeße;
-            Name = name;
-            Speed = speed;
+            // Fische änderen die Höhe
+            RichtungAendern(aquarium, Richtungaendert);
+            HoehenWaechsel(aquarium, Hoeheaendert);
+            
+            if (Richtung == "l")
+            {
+                //nicht gegen Wände schwimmen
+                if (Laenge.Length >= PosY - Speed)
+                {
+                    Richtung = "r";
+                    PosY = Laenge.Length;
+                }
+                else
+                {
+                    PosY -= Speed;
+                }
+            }
+            else
+            {
+                if (Laenge.Length >= (aquarium.Content.GetLength(1) - PosY + Speed))
+                {//Wände vermeiden
+                    Richtung = "l";
+                    PosY = aquarium.Content.GetLength(1) - 1 - Laenge.Length;
+                }
+                else
+                {//gearde aus schwimmen
+                    PosY += Speed;
+
+                }
+            }
         }
-        void REPrintArray(int[] arr)
+        public void RichtungAendern(Aquarium aquarium, int probability)
         {
-
-            //Aquarium reprint
-            string[,] aquarium = new string[10, 10];
-            for (int j = 0; j < 10; j++)
+            if (aquarium.Random.Next(0, probability) == 1)
             {
-                for (int i = 0; i < 10; i++)
+                if (Richtung == "l")
                 {
-                    if (i == 0)
-                    {
-                        aquarium[i, j] = "|";
-                    }
-                    else if (i >= 9)
-                    {
-                        aquarium[i, j] = "|";
-                    }
-                    else if (j >= 9)
-                    {
-                        aquarium[i, j] = "_";
-                    }
-                    else
-                    {
-                        aquarium[i, j] = "a";
-
-                    }
-
+                    Richtung = "r";
+                    PosY += Laenge.Length;
+                }
+                else
+                {
+                    Richtung = "l";
+                    PosY -= Laenge.Length;
                 }
             }
-            for (int j = 0; j < 10; j++)
+        }
+        public void HoehenWaechsel(Aquarium aquarium, int probability)
+        {
+            if (aquarium.Random.Next(0, probability) == 1)
             {
-                for (int i = 0; i < 10; i++)
+                if (aquarium.Random.Next(0, 2) == 1 && PosX - 1 >= 0)
                 {
-                    Console.Write(aquarium[i, j]);
+                    PosX -= 1;
                 }
-                Console.Write("\n");
+                else if (PosX + 1 < aquarium.Content.GetLength(0) - 1)
+                {
+                    PosX += 1;
+                }
             }
-
+        }
+        public void Fressen(FishClass Crap)
+        {
+            if (typeof(Shark).ToString() == "Shark")
+            {
+                string a = Convert.ToString(GetType());
+                if (Crap.Laenge == "<><")
+                {
+                    List<string> list = new List<string>();
+                    list.Add("<><");
+                    
+                }
+            }
         }
     }
-    
 }

@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace aquarium
+namespace ConsoleApp2
 {
-    public class Kugelfisch : FishClass
+    public class Crap : Fish
     {
-        public Kugelfisch(int x, int y)
+        public Crap(int x, int y)
         {
-            Laenge = "<()><";
-            LaengeReverse = "><()>";
+            Laenge = "<><";
+            LaengeReversed = "><>";
             PosX = x;
             PosY = y;
-            Richtung = "l";
-            Hoeheaendert = 10;
+            Richtung = "left";
+            Hoeheaendert = 2;
             Richtungaendert = 50;
             Speed = 1;
         }
