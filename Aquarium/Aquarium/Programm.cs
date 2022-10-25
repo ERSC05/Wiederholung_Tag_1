@@ -35,7 +35,7 @@ namespace aquarium
             
             while (true)
             {
-                Thread.Sleep(1000);
+                Thread.Sleep(500);
                 aquarium.Schwimmen();
                 aquarium.AquariumLeer();
             }
